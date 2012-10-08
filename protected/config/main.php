@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Новостной портал',
-        'sourceLanguage' => 'en_US',
+        //'sourceLanguage' => 'en_US',
         'language' => 'ru',
         // preloading 'log' component
 	'preload'=>array('log'),
