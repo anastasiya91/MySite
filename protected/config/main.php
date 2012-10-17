@@ -20,14 +20,14 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
+		'panel',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'k308o2p',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-		*/
+		
+    ),	
 	),
 
 	// application components
@@ -47,16 +47,17 @@ return array(
 			),
 		),
 		*/
-		//'db' => include(dirname(__FILE__).'/db.php'),
+		'db' => include(dirname(__FILE__).'/db.php'),
 		// uncomment the following to use a MySQL database
 		
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=db_mysite',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'k308o2p',
+			'password' => '',
 			'charset' => 'utf8',
-		),
+                        'tablePrefix'=>'tbl_',
+		),*/
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
