@@ -31,6 +31,11 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+        
+        public function actionFoto(){
+            //Actions for fofo.php
+            $this->render('foto');
+        }
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -65,7 +70,7 @@ class SiteController extends Controller
 					"Content-type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Спасибо за то, что связались с нами. Мы ответим Вам как можно скорее.');
 				$this->refresh();
 			}
 		}

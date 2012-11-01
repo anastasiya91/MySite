@@ -16,7 +16,7 @@ in the "<?php echo $this->module->id; ?>" module.
 You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
 </p>
 <?php 
-$model=new News;
+$model = new Pages;
 $this->widget('ext.fckeditor.FCKEditorWidget', array(
             "model"=>$model,
               "attribute"=>'content',              

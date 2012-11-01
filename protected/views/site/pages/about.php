@@ -1,12 +1,12 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - About';
+$this->pageTitle= 'О нас'.' - '. Yii::app()->name;
 $this->breadcrumbs=array(
-	'About',
+	'О нас',
 );
 ?>
-<h1>About</h1>
+<h1>О  нас</h1>
 
 <p>This is a "static" page. You may change the content of this page
 by updating the file <code><?php echo __FILE__; ?></code>.</p>

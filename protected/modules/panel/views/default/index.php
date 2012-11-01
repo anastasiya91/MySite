@@ -1,12 +1,15 @@
 <?php
-/* @var $this DefaultController */
+/* @var $this SiteController */
 
+$this->pageTitle= 'Панель управления'.' - '. Yii::app()->name;
 $this->breadcrumbs=array(
-	$this->module->id,
+	'Панель управления',
 );
 ?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
-
+<h1>Добро пожаловать в панель управления!</h1>
+<p>
+    Для добавления/удаления страниц и новостей, перейдите в <a href="<?php Yii::app()->baseUrl ?>/mysite/index.php?r=panel/ckeditor/">CkEditor</a>.
+</p>
 <p>
 This is the view content for action "<?php echo $this->action->id; ?>".
 The action belongs to the controller "<?php echo get_class($this); ?>"

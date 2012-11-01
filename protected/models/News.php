@@ -19,7 +19,7 @@ class News extends CActiveRecord
      * @param string $className active record class name.
      * @return News the static model class
      */
-   
+    
         public static function model($className=__CLASS__)
     {
         return parent::model($className);
@@ -101,5 +101,47 @@ class News extends CActiveRecord
             'criteria'=>$criteria,
         ));
     }
+    
+     public function addToBD ($title, $preview, $content){
+            $news=new News;
+            $news->title=$title;
+            $news->preview=$preview;
+            //Добавление контента
+            $news->content=$content;
+            $news->updated_at=  new CDbExpression('NOW()');
+            $news->user_id=  Yii::app()->user->id;
+            if($news->save())
+                {
+        // данные корректны и успешно добавлены/обновлены
+                  
+                   return TRUE;
+                }
+            else
+                {
+        // данные некорректны, сообщения об ошибках могут быть получены путём вызова метода getErrors()
+        //echo 'Возникли ошибки. Новость не добавлена! Проверьте правильность введённых данных!';
+        return array(TRUE, 'Errors'=>$this->getErrors());
+                }
+        }
+   /* public function addToBD ($title, $preview, $content){
+            $news=new News;
+            $news->title=$title;
+            $news->preview=$preview;
+            //Добавление контента
+            $news->content=$content;
+            $news->updated_at=  new CDbExpression('NOW()');
+            //$news->user_id=
+            if($news->save())
+                {
+        // данные корректны и успешно добавлены/обновлены
+                   echo 'Новость успешно добавлена!';
+                }
+            else
+                {
+        // данные некорректны, сообщения об ошибках могут быть получены путём вызова метода getErrors()
+        echo 'Возникли ошибки. Новость не добавлена! Проверьте правильность введённых данных!';
+        echo $this->getErrors();
+                }
+    }*/
 } 
 ?>
