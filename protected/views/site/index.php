@@ -1,5 +1,5 @@
-
-		<section id="content">
+<div class="content">
+		<section class="content">
 			<div class="marg_top wrapper">
 				<article class="col1">
 					<div class="box1_out">
@@ -84,4 +84,4 @@
 					</div>
 				</article>
 			</div>
-		</section>
+		</section></div>

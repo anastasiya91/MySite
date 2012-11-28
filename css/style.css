@@ -37,7 +37,7 @@ header nav {border:1px solid #bebebe;background:url(../images/menu_bg.gif) botto
 #icons li {float:left;padding-left:10px}
 #icons span {padding-right:13px}
 /* content */
-#content {position:relative;padding-bottom:35px}
+.content {position:relative;padding-bottom:35px}
 .marg_top { position:relative;margin-top:-168px;z-index:11}
 .marg_top2 {margin-top:11px}
 .pad_left1 {padding-left:24px}

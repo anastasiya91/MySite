@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */ ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -85,14 +86,25 @@
 						</article>
 						<article class="cols pad_left1">
 							<h2>Customer Log In</h2>
-							<form id="form_2" action="" method="post">
-								<div>
-									<div class="bg left"><input class="input input1" type="text" value="Enter user ID here"	onblur="if(this.value=='') this.value='Enter user ID here'" onFocus="if(this.value =='Enter user ID here' ) this.value=''" /></div>
-									<div class="bg right"><input class="input input2" type="password" value="••••••••••" onblur="if(this.value=='') this.value='••••••••••'" onFocus="if(this.value =='••••••••••' ) this.value=''"	 /></div>
-									<a href="#" class="submit" onClick="document.getElementById('form_2').submit()"><span><span>login</span></span></a>
-									<a href="#">Forgot password?</a> &nbsp;	<a href="#">Sign up</a>
-								</div>
-							</form>
+							<div class="form">
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'form_2',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+            ),
+)); ?>
+
+<div>
+<div class="bg left">
+ <input class="input input1" type="text" value="Enter user ID here"	onblur="if(this.value=='') this.value='Enter user ID here'" onFocus="if(this.value =='Enter user ID here' ) this.value=''" /></div>
+                                                                        
+<div class="bg right"><input class="input input2" type="password" value="••••••••••" onblur="if(this.value=='') this.value='••••••••••'" onFocus="if(this.value =='••••••••••' ) this.value=''"	 /></div>
+<?php echo CHtml::submitButton('Войти'); ?>
+<a href="#">Forgot password?</a> &nbsp;	<a href="#">Sign up</a>
+</div>
+    <?php $this->endWidget(); ?>
+</div>
 						</article>
 					</div>
 				</div>	

@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
-	),
+                ),
 )); ?>
 
 	<p class="note">Поля, отмеченые <span class="required">*</span>, являются обязательными.</p>
