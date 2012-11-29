@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,11 +98,12 @@
 
 <div>
 <div class="bg left">
- <input class="input input1" type="text" value="Enter user ID here"	onblur="if(this.value=='') this.value='Enter user ID here'" onFocus="if(this.value =='Enter user ID here' ) this.value=''" /></div>
+ <input class="input input1" name="LoginForm[username]" type="text" value="Enter user ID here"	onblur="if(this.value=='') this.value='Enter user ID here'" onFocus="if(this.value =='Enter user ID here' ) this.value=''" /></div>
                                                                         
-<div class="bg right"><input class="input input2" type="password" value="••••••••••" onblur="if(this.value=='') this.value='••••••••••'" onFocus="if(this.value =='••••••••••' ) this.value=''"	 /></div>
-<?php echo CHtml::submitButton('Войти'); ?>
+    <div class="bg right"><input class="input input2" name="" type="password" value="••••••••••" onblur="if(this.value=='') this.value='••••••••••'" onFocus="if(this.value =='••••••••••' ) this.value=''"	 /></div>
+    
 <a href="#">Forgot password?</a> &nbsp;	<a href="#">Sign up</a>
+<a href="javascript:void(0)" class="submit" onclick="submitLogin()"> Войти </a>
 </div>
     <?php $this->endWidget(); ?>
 </div>
@@ -121,5 +123,10 @@
 <!-- / footer -->
 </div>
 <script type="text/javascript"> Cufon.now(); </script>
+<script type="text/javascript">
+function submitLogin(){
+    $("form#form_2").submit();
+}
+</script>
 </body>
 </html>
